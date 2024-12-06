@@ -8,8 +8,7 @@ console.log("backend start");
 
 const app = express();
 const port = process.env.PORT || 3000;
-
-app.use(cors());
+app.use(cors({ origin: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
